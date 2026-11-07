@@ -8,6 +8,11 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [visibleSections, setVisibleSections] = useState<Set<number>>(new Set());
+  const homeHref =
+    typeof window !== "undefined" &&
+    window.location.pathname.startsWith("/mother-fitness-website")
+      ? "/mother-fitness-website/"
+      : "/";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,7 +42,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-pink-100 shadow-sm">
         <div className="container py-6">
           <div className="mb-5 flex justify-center">
-            <a href="/" className="rounded-full border border-pink-200 bg-white/80 px-4 py-2 text-xs font-semibold text-pink-600 transition-colors hover:bg-pink-50">
+            <a href={homeHref} className="rounded-full border border-pink-200 bg-white/80 px-4 py-2 text-xs font-semibold text-pink-600 transition-colors hover:bg-pink-50">
               ← 回到「日日有力」健康專頁
             </a>
           </div>

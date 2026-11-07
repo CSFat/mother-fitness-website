@@ -54,6 +54,11 @@ const rhythm = [
   { time: "03", label: "平衡", text: "扶著椅背站穩，慢慢把重心找回來。", icon: CircleDot },
 ];
 
+const heroImage =
+  import.meta.env.VITE_GITHUB_PAGES === "true"
+    ? `${import.meta.env.BASE_URL}assets/mother-strength-hero.jpg`
+    : "/manus-storage/mother-strength-hero_e40a225f.jpg";
+
 export default function Home() {
   return (
     <SiteShell>
@@ -101,7 +106,7 @@ export default function Home() {
               </div>
               <div className="overflow-hidden rounded-[2rem] border-[10px] border-[#fffaf3] bg-[#e7dccd] shadow-[0_24px_70px_rgba(74,54,42,0.2)]">
                 <img
-                  src="/manus-storage/mother-strength-hero_e40a225f.jpg"
+                  src={heroImage}
                   alt="媽媽在家中用水樽進行溫和的手臂力量練習"
                   className="aspect-[4/3] w-full object-cover object-center lg:aspect-[16/11]"
                 />

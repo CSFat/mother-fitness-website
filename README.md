@@ -1,10 +1,14 @@
-# 日日有力｜Complete Website Bundle
+# 日日有力｜Complete Website Bundle (GitHub Pages fixed)
 
-This bundle contains the complete editable website source and a compiled export ready for GitHub Pages.
+This bundle contains the complete editable website source and a corrected GitHub Pages export for the repository `mother-fitness-website`.
 
 ## Publish to GitHub Pages
 
-Upload the **contents of `github-export/`** to the root of your GitHub repository. That folder already contains `index.html` at its own root, `404.html` for client-side route fallback, compiled assets, the local hero image, and a README.
+Upload the **contents of `github-export/`** to the root of the GitHub repository. This export is built for:
+
+https://csfat.github.io/mother-fitness-website/
+
+It includes `index.html` at the folder root, project-subpath asset URLs, `404.html` for client-side route fallback, compiled assets, and the local hero image.
 
 ## Edit the website
 
@@ -15,12 +19,8 @@ pnpm install
 pnpm dev
 ```
 
-To rebuild the static site:
+To make a GitHub Pages build for this repository:
 
 ```bash
-pnpm build
+VITE_BASE_PATH=/mother-fitness-website/ VITE_GITHUB_PAGES=true pnpm build
 ```
-
-The project uses client-side routes for `/understand`, `/moves`, `/plan`, `/fuel`, `/safety`, and `/laundry`. The GitHub export includes `404.html` so GitHub Pages can fall back to the app shell when a route is opened directly.
-
-The existing laundry tribute page is preserved at `/laundry`.
