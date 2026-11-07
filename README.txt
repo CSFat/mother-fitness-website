@@ -1,4 +1,5 @@
-GitHub-ready static export for 日日有力.
+GitHub Pages export for the repository named mother-fitness-website.
 
-Upload all files in this folder to the root of your GitHub Pages repository.
-index.html is already at the root. 404.html is included so client-side routes can fall back to the app shell.
+Upload the contents of this folder to the root of the GitHub repository.
+The build is configured for https://csfat.github.io/mother-fitness-website/.
+index.html is the homepage. 404.html supports client-side routes on GitHub Pages.
